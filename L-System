@@ -1,0 +1,9 @@
+type unop = Cos | Sin;;
+type binop = Plus | Moins | Fois;;
+type expr = Num of float
+| Var of string
+| Unop of unop * expr
+| Binop of binop * expr * expr;;
+
+
+let string_of_unop e = match e with
